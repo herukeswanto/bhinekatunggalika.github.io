@@ -74,11 +74,11 @@
         <ul class="list-group">
             <li class="list-group-item">
                 <strong style="color: white;">📚 Materi:</strong>
-                <select class="form-select mt-2" onchange="location = this.value;">
+                <select class="form-select mt-2" onchange="bukaMateri(this.value);">
                     <option selected disabled>Pilih Materi</option>
-                    <option value="materi1.html">📝 Bentuk-Bentuk Keberagaman Diindonesia</option>
-                    <option value="materi2.html">📑 Bentuk dan Akibat Konflik di Tengah Keberagaman Masyarakat Indonesia</option>
-                    <option value="materi3.html">📖 Alternatif dan Solusi Upaya Penyelesaian Konflik di Tengah Keberagaman Masyarakat Indonesia</option>
+                    <option value="ppt1">📂 PPT 1 - Potensi dan Penyebab Konflik di Tengah Keberagaman Masyarakat Indonesia</option>
+                    <option value="ppt2">📂 PPT 2 - Bentuk dan Akibat Konflik di Tengah Keberagaman Masyarakat Indonesia</option>
+                    <option value="ppt3">📂 PPT 3 - Alternatif dan Solusi Upaya Penyelesaian Konflik di Tengah Keberagaman Masyarakat Indonesia</option>
                 </select>
             <li class="list-group-item"><a href="preetest.html">📝 Preetest</a></li>
             <li class="list-group-item"><a href="tujuanpembelajaran.html">🎯 Tujuan Pembelajaran</a></li>
@@ -113,6 +113,20 @@
             window.close();
         }
     }
+
+    function bukaMateri(value) {
+        let pptLinks = {
+            "ppt1": "https://docs.google.com/presentation/d/1yFLQHrd1hL_-FCTki4VJ7w7zCdpNbBiY/preview",
+            "ppt2": "https://docs.google.com/presentation/d/1wPZaCnaIc79aonUo9N75MdzDQWaKEC7O/preview",
+            "ppt3": "https://docs.google.com/presentation/d/172BzchSVN0WHcY4jfD8NWxbREx4yeBYQ/preview"
+         };
+         if (pptLinks[value]) {
+            window.open(pptLinks[value], "_blank");
+        } else if (value) {
+            window.location.href = value;
+        }
+
+        }
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
